@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show Jinja2 function</title>
+</head>
+<body>
+    {% for content in contentList %} 
+        {% for key in content %} 
+                {%if key=="页数" %}
+                    <dt  class="content"> {{key}}{{content[key]}}</dt>
+                {%else%}
+                    <dd class="lower">{{key}} : {{content[key]}}</dd>
+                {% endif %}
+        {% endfor %}       
+    {% endfor %}
+</body>
+</html>
