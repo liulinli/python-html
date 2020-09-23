@@ -6,8 +6,7 @@ import webbrowser
 from flask import Flask, render_template
 ssl._create_default_https_context = ssl._create_unverified_context
 
-allUrl='https://airecsim-cdn.cn/rec-v2/REC2007405706/latest.json'
-#allUrl='https://airecqa-cdn.cn/rec-v2/REC2009005505/latest.json'
+
 #recCode=input('请输入reccode: ')
 #environment=input('请输入录像环境： ')
 #allUrl=' https://airec'+environment+'-cdn.cn/rec-v2/'+recCode+'/latest.json'
