@@ -14,3 +14,9 @@ message = """<html>
 f.write(message)
 f.close()
 webbrowser.open('file:///Library/Frameworks/Python.framework/Versions/3.8/bin/python-test/helloworld.html')
+
+
+ url3 = 'http://127.0.0.1:8898/data' ,
+            $.getJSON(url3,function(slots){
+                console.log(slots),
+            }); 
