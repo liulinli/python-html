@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show Jinja2 function</title>
+   <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+    {% for contents in contentList %} 
+        <div class="dropdown">
+            {% for keys in contents %} 
+                {%if keys=="页数" %}
+                    <button class="dropbtn">{{contents[keys]}}</button>
+                {% endif %}
+            {% endfor %}  
+            <div class="dropdown-content">
+                {% for keys in contents %} 
+                    {%if keys!="页数" and keys!="录制分支"%}         
+                        <a>{{keys}}：{{contents[keys]}}</a>
+                    {% endif %}
+                    {%if keys=="录制分支" %}         
+                        {% for key in contents[keys] %}     
+                            <a>
+                            {% for bad in key %}
+                                {{bad}}：{{key[bad]}}
+                            {% endfor %}  
+                            </a>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div> 
+    {% endfor %}    
+</body>
+</html>
